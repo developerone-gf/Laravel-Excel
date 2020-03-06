@@ -1,8 +1,8 @@
 <?php
 
-namespace Maatwebsite\Excel\Events;
+namespace Developergf\Excel\Events;
 
-use Maatwebsite\Excel\Reader;
+use Developergf\Excel\Reader;
 
 class AfterImport extends Event
 {

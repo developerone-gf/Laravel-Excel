@@ -1,6 +1,6 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests\Helpers;
+namespace Developergf\Excel\Tests\Helpers;
 
 class FileHelper
 {

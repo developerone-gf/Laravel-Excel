@@ -1,12 +1,12 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests\Concerns;
+namespace Developergf\Excel\Tests\Concerns;
 
-use Maatwebsite\Excel\Concerns\Exportable;
-use Maatwebsite\Excel\Concerns\FromArray;
-use Maatwebsite\Excel\Concerns\WithMapping;
-use Maatwebsite\Excel\Tests\Data\Stubs\WithMappingExport;
-use Maatwebsite\Excel\Tests\TestCase;
+use Developergf\Excel\Concerns\Exportable;
+use Developergf\Excel\Concerns\FromArray;
+use Developergf\Excel\Concerns\WithMapping;
+use Developergf\Excel\Tests\Data\Stubs\WithMappingExport;
+use Developergf\Excel\Tests\TestCase;
 
 class WithMappingTest extends TestCase
 {

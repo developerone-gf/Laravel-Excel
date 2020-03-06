@@ -1,10 +1,10 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests\Concerns;
+namespace Developergf\Excel\Tests\Concerns;
 
-use Maatwebsite\Excel\Concerns\Importable;
-use Maatwebsite\Excel\Concerns\ToArray;
-use Maatwebsite\Excel\Tests\TestCase;
+use Developergf\Excel\Concerns\Importable;
+use Developergf\Excel\Concerns\ToArray;
+use Developergf\Excel\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 class ToArrayTest extends TestCase

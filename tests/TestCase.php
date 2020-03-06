@@ -1,10 +1,10 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests;
+namespace Developergf\Excel\Tests;
 
 use Illuminate\Contracts\Queue\Job;
 use Illuminate\Http\Testing\File;
-use Maatwebsite\Excel\ExcelServiceProvider;
+use Developergf\Excel\ExcelServiceProvider;
 use Orchestra\Database\ConsoleServiceProvider;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use PhpOffice\PhpSpreadsheet\IOFactory;

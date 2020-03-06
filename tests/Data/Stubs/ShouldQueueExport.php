@@ -1,10 +1,10 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests\Data\Stubs;
+namespace Developergf\Excel\Tests\Data\Stubs;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Maatwebsite\Excel\Concerns\Exportable;
-use Maatwebsite\Excel\Concerns\WithMultipleSheets;
+use Developergf\Excel\Concerns\Exportable;
+use Developergf\Excel\Concerns\WithMultipleSheets;
 
 class ShouldQueueExport implements WithMultipleSheets, ShouldQueue
 {

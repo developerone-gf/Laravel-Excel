@@ -1,15 +1,15 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests\Concerns;
+namespace Developergf\Excel\Tests\Concerns;
 
 use Illuminate\Database\Eloquent\Model;
-use Maatwebsite\Excel\Concerns\Importable;
-use Maatwebsite\Excel\Concerns\ToArray;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithLimit;
-use Maatwebsite\Excel\Concerns\WithStartRow;
-use Maatwebsite\Excel\Tests\Data\Stubs\Database\User;
-use Maatwebsite\Excel\Tests\TestCase;
+use Developergf\Excel\Concerns\Importable;
+use Developergf\Excel\Concerns\ToArray;
+use Developergf\Excel\Concerns\ToModel;
+use Developergf\Excel\Concerns\WithLimit;
+use Developergf\Excel\Concerns\WithStartRow;
+use Developergf\Excel\Tests\Data\Stubs\Database\User;
+use Developergf\Excel\Tests\TestCase;
 use PHPUnit\Framework\Assert;
 
 class WithLimitTest extends TestCase

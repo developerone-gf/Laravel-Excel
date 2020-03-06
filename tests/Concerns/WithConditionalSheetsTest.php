@@ -1,12 +1,12 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests\Concerns;
+namespace Developergf\Excel\Tests\Concerns;
 
-use Maatwebsite\Excel\Concerns\Importable;
-use Maatwebsite\Excel\Concerns\ToArray;
-use Maatwebsite\Excel\Concerns\WithConditionalSheets;
-use Maatwebsite\Excel\Concerns\WithMultipleSheets;
-use Maatwebsite\Excel\Tests\TestCase;
+use Developergf\Excel\Concerns\Importable;
+use Developergf\Excel\Concerns\ToArray;
+use Developergf\Excel\Concerns\WithConditionalSheets;
+use Developergf\Excel\Concerns\WithMultipleSheets;
+use Developergf\Excel\Tests\TestCase;
 
 class WithConditionalSheetsTest extends TestCase
 {

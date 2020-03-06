@@ -1,12 +1,12 @@
 <?php
 
-namespace Maatwebsite\Excel\Jobs;
+namespace Developergf\Excel\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Maatwebsite\Excel\Concerns\WithEvents;
-use Maatwebsite\Excel\Files\TemporaryFile;
-use Maatwebsite\Excel\Writer;
+use Developergf\Excel\Concerns\WithEvents;
+use Developergf\Excel\Files\TemporaryFile;
+use Developergf\Excel\Writer;
 
 class CloseSheet implements ShouldQueue
 {

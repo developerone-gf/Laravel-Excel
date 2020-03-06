@@ -1,6 +1,6 @@
 <?php
 
-namespace Maatwebsite\Excel\Concerns;
+namespace Developergf\Excel\Concerns;
 
 interface WithValidation
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace Maatwebsite\Excel\Jobs;
+namespace Developergf\Excel\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Maatwebsite\Excel\Files\Filesystem;
-use Maatwebsite\Excel\Files\TemporaryFile;
+use Developergf\Excel\Files\Filesystem;
+use Developergf\Excel\Files\TemporaryFile;
 
 class StoreQueuedExport implements ShouldQueue
 {

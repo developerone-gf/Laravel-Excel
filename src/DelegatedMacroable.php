@@ -1,6 +1,6 @@
 <?php
 
-namespace Maatwebsite\Excel;
+namespace Developergf\Excel;
 
 use Illuminate\Support\Traits\Macroable;
 

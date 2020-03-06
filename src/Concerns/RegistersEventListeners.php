@@ -1,14 +1,14 @@
 <?php
 
-namespace Maatwebsite\Excel\Concerns;
+namespace Developergf\Excel\Concerns;
 
-use Maatwebsite\Excel\Events\AfterImport;
-use Maatwebsite\Excel\Events\AfterSheet;
-use Maatwebsite\Excel\Events\BeforeExport;
-use Maatwebsite\Excel\Events\BeforeImport;
-use Maatwebsite\Excel\Events\BeforeSheet;
-use Maatwebsite\Excel\Events\BeforeWriting;
-use Maatwebsite\Excel\Events\ImportFailed;
+use Developergf\Excel\Events\AfterImport;
+use Developergf\Excel\Events\AfterSheet;
+use Developergf\Excel\Events\BeforeExport;
+use Developergf\Excel\Events\BeforeImport;
+use Developergf\Excel\Events\BeforeSheet;
+use Developergf\Excel\Events\BeforeWriting;
+use Developergf\Excel\Events\ImportFailed;
 
 trait RegistersEventListeners
 {

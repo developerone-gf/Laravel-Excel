@@ -1,19 +1,19 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests\Concerns;
+namespace Developergf\Excel\Tests\Concerns;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\Rule;
-use Maatwebsite\Excel\Concerns\Importable;
-use Maatwebsite\Excel\Concerns\OnEachRow;
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithBatchInserts;
-use Maatwebsite\Excel\Concerns\WithHeadingRow;
-use Maatwebsite\Excel\Concerns\WithValidation;
-use Maatwebsite\Excel\Row;
-use Maatwebsite\Excel\Tests\Data\Stubs\Database\User;
-use Maatwebsite\Excel\Tests\TestCase;
-use Maatwebsite\Excel\Validators\ValidationException;
+use Developergf\Excel\Concerns\Importable;
+use Developergf\Excel\Concerns\OnEachRow;
+use Developergf\Excel\Concerns\ToModel;
+use Developergf\Excel\Concerns\WithBatchInserts;
+use Developergf\Excel\Concerns\WithHeadingRow;
+use Developergf\Excel\Concerns\WithValidation;
+use Developergf\Excel\Row;
+use Developergf\Excel\Tests\Data\Stubs\Database\User;
+use Developergf\Excel\Tests\TestCase;
+use Developergf\Excel\Validators\ValidationException;
 
 class WithValidationTest extends TestCase
 {

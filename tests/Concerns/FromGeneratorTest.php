@@ -1,11 +1,11 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests\Concerns;
+namespace Developergf\Excel\Tests\Concerns;
 
 use Generator;
-use Maatwebsite\Excel\Concerns\Exportable;
-use Maatwebsite\Excel\Concerns\FromGenerator;
-use Maatwebsite\Excel\Tests\TestCase;
+use Developergf\Excel\Concerns\Exportable;
+use Developergf\Excel\Concerns\FromGenerator;
+use Developergf\Excel\Tests\TestCase;
 
 class FromGeneratorTest extends TestCase
 {

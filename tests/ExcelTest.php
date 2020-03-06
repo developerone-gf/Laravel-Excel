@@ -1,23 +1,23 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests;
+namespace Developergf\Excel\Tests;
 
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Collection;
-use Maatwebsite\Excel\Concerns\Exportable;
-use Maatwebsite\Excel\Concerns\FromCollection;
-use Maatwebsite\Excel\Concerns\FromView;
-use Maatwebsite\Excel\Concerns\Importable;
-use Maatwebsite\Excel\Concerns\RegistersEventListeners;
-use Maatwebsite\Excel\Concerns\ToArray;
-use Maatwebsite\Excel\Concerns\WithCustomCsvSettings;
-use Maatwebsite\Excel\Concerns\WithEvents;
-use Maatwebsite\Excel\Excel;
-use Maatwebsite\Excel\Facades\Excel as ExcelFacade;
-use Maatwebsite\Excel\Importer;
-use Maatwebsite\Excel\Tests\Data\Stubs\EmptyExport;
-use Maatwebsite\Excel\Tests\Helpers\FileHelper;
+use Developergf\Excel\Concerns\Exportable;
+use Developergf\Excel\Concerns\FromCollection;
+use Developergf\Excel\Concerns\FromView;
+use Developergf\Excel\Concerns\Importable;
+use Developergf\Excel\Concerns\RegistersEventListeners;
+use Developergf\Excel\Concerns\ToArray;
+use Developergf\Excel\Concerns\WithCustomCsvSettings;
+use Developergf\Excel\Concerns\WithEvents;
+use Developergf\Excel\Excel;
+use Developergf\Excel\Facades\Excel as ExcelFacade;
+use Developergf\Excel\Importer;
+use Developergf\Excel\Tests\Data\Stubs\EmptyExport;
+use Developergf\Excel\Tests\Helpers\FileHelper;
 use PHPUnit\Framework\Assert;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
@@ -197,7 +197,7 @@ class ExcelTest extends TestCase
      */
     public function cannot_use_from_collection_and_from_view_on_same_export()
     {
-        $this->expectException(\Maatwebsite\Excel\Exceptions\ConcernConflictException::class);
+        $this->expectException(\Developergf\Excel\Exceptions\ConcernConflictException::class);
         $this->expectExceptionMessage('Cannot use FromQuery, FromArray or FromCollection and FromView on the same sheet');
 
         $export = new class implements FromCollection, FromView {
@@ -405,7 +405,7 @@ class ExcelTest extends TestCase
      */
     public function import_will_throw_error_when_no_reader_type_could_be_detected_when_no_extension()
     {
-        $this->expectException(\Maatwebsite\Excel\Exceptions\NoTypeDetectedException::class);
+        $this->expectException(\Developergf\Excel\Exceptions\NoTypeDetectedException::class);
 
         $import = new class implements ToArray {
             /**
@@ -428,7 +428,7 @@ class ExcelTest extends TestCase
      */
     public function import_will_throw_error_when_no_reader_type_could_be_detected_with_unknown_extension()
     {
-        $this->expectException(\Maatwebsite\Excel\Exceptions\NoTypeDetectedException::class);
+        $this->expectException(\Developergf\Excel\Exceptions\NoTypeDetectedException::class);
 
         $import = new class implements ToArray {
             /**

@@ -1,19 +1,19 @@
 <?php
 
-namespace Maatwebsite\Excel\Jobs;
+namespace Developergf\Excel\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Maatwebsite\Excel\Concerns\WithChunkReading;
-use Maatwebsite\Excel\Concerns\WithCustomValueBinder;
-use Maatwebsite\Excel\Concerns\WithEvents;
-use Maatwebsite\Excel\Events\ImportFailed;
-use Maatwebsite\Excel\Files\TemporaryFile;
-use Maatwebsite\Excel\Filters\ChunkReadFilter;
-use Maatwebsite\Excel\HasEventBus;
-use Maatwebsite\Excel\Imports\HeadingRowExtractor;
-use Maatwebsite\Excel\Sheet;
-use Maatwebsite\Excel\Transactions\TransactionHandler;
+use Developergf\Excel\Concerns\WithChunkReading;
+use Developergf\Excel\Concerns\WithCustomValueBinder;
+use Developergf\Excel\Concerns\WithEvents;
+use Developergf\Excel\Events\ImportFailed;
+use Developergf\Excel\Files\TemporaryFile;
+use Developergf\Excel\Filters\ChunkReadFilter;
+use Developergf\Excel\HasEventBus;
+use Developergf\Excel\Imports\HeadingRowExtractor;
+use Developergf\Excel\Sheet;
+use Developergf\Excel\Transactions\TransactionHandler;
 use PhpOffice\PhpSpreadsheet\Cell\Cell;
 use PhpOffice\PhpSpreadsheet\Reader\IReader;
 use Throwable;
@@ -92,7 +92,7 @@ class ReadChunk implements ShouldQueue
     /**
      * @param  TransactionHandler  $transaction
      *
-     * @throws \Maatwebsite\Excel\Exceptions\SheetNotFoundException
+     * @throws \Developergf\Excel\Exceptions\SheetNotFoundException
      * @throws \PhpOffice\PhpSpreadsheet\Reader\Exception
      */
     public function handle(TransactionHandler $transaction)

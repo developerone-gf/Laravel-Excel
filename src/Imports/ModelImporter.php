@@ -1,13 +1,13 @@
 <?php
 
-namespace Maatwebsite\Excel\Imports;
+namespace Developergf\Excel\Imports;
 
-use Maatwebsite\Excel\Concerns\ToModel;
-use Maatwebsite\Excel\Concerns\WithBatchInserts;
-use Maatwebsite\Excel\Concerns\WithCalculatedFormulas;
-use Maatwebsite\Excel\Concerns\WithMapping;
-use Maatwebsite\Excel\Concerns\WithProgressBar;
-use Maatwebsite\Excel\Row;
+use Developergf\Excel\Concerns\ToModel;
+use Developergf\Excel\Concerns\WithBatchInserts;
+use Developergf\Excel\Concerns\WithCalculatedFormulas;
+use Developergf\Excel\Concerns\WithMapping;
+use Developergf\Excel\Concerns\WithProgressBar;
+use Developergf\Excel\Row;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 class ModelImporter

@@ -1,16 +1,16 @@
 <?php
 
-namespace Maatwebsite\Excel\Tests;
+namespace Developergf\Excel\Tests;
 
 use Illuminate\Foundation\Bus\PendingDispatch;
 use Illuminate\Queue\Events\JobProcessing;
 use Illuminate\Support\Facades\Queue;
-use Maatwebsite\Excel\Concerns\Importable;
-use Maatwebsite\Excel\Files\RemoteTemporaryFile;
-use Maatwebsite\Excel\Files\TemporaryFile;
-use Maatwebsite\Excel\Jobs\ReadChunk;
-use Maatwebsite\Excel\Tests\Data\Stubs\AfterQueueImportJob;
-use Maatwebsite\Excel\Tests\Data\Stubs\QueuedImport;
+use Developergf\Excel\Concerns\Importable;
+use Developergf\Excel\Files\RemoteTemporaryFile;
+use Developergf\Excel\Files\TemporaryFile;
+use Developergf\Excel\Jobs\ReadChunk;
+use Developergf\Excel\Tests\Data\Stubs\AfterQueueImportJob;
+use Developergf\Excel\Tests\Data\Stubs\QueuedImport;
 
 class QueuedImportTest extends TestCase
 {

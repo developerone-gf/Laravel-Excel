@@ -1,8 +1,8 @@
 <?php
 
-namespace Maatwebsite\Excel\Imports;
+namespace Developergf\Excel\Imports;
 
-use Maatwebsite\Excel\Concerns\WithLimit;
+use Developergf\Excel\Concerns\WithLimit;
 
 class EndRowFinder
 {

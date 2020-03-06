@@ -1,6 +1,6 @@
 <?php
 
-namespace Maatwebsite\Excel\Console;
+namespace Developergf\Excel\Console;
 
 use Illuminate\Support\Str;
 use InvalidArgumentException;

@@ -1,19 +1,19 @@
 <?php
 
-namespace Maatwebsite\Excel;
+namespace Developergf\Excel;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Collection;
-use Maatwebsite\Excel\Concerns\WithChunkReading;
-use Maatwebsite\Excel\Concerns\WithEvents;
-use Maatwebsite\Excel\Concerns\WithLimit;
-use Maatwebsite\Excel\Concerns\WithProgressBar;
-use Maatwebsite\Excel\Events\BeforeImport;
-use Maatwebsite\Excel\Files\TemporaryFile;
-use Maatwebsite\Excel\Imports\HeadingRowExtractor;
-use Maatwebsite\Excel\Jobs\AfterImportJob;
-use Maatwebsite\Excel\Jobs\QueueImport;
-use Maatwebsite\Excel\Jobs\ReadChunk;
+use Developergf\Excel\Concerns\WithChunkReading;
+use Developergf\Excel\Concerns\WithEvents;
+use Developergf\Excel\Concerns\WithLimit;
+use Developergf\Excel\Concerns\WithProgressBar;
+use Developergf\Excel\Events\BeforeImport;
+use Developergf\Excel\Files\TemporaryFile;
+use Developergf\Excel\Imports\HeadingRowExtractor;
+use Developergf\Excel\Jobs\AfterImportJob;
+use Developergf\Excel\Jobs\QueueImport;
+use Developergf\Excel\Jobs\ReadChunk;
 use Throwable;
 
 class ChunkReader
