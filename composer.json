@@ -48,7 +48,7 @@
         "Developergf\\Excel\\ExcelServiceProvider"
       ],
       "aliases": {
-        "Excel": "Developergf\\Excel\\Facades\\Excel"
+        "LastExcel": "Developergf\\Excel\\Facades\\Excel"
       }
     }
   },

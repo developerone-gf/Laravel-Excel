@@ -62,7 +62,7 @@ class ExcelServiceProvider extends ServiceProvider
             return new Filesystem($this->app->make('filesystem'));
         });
 
-        $this->app->bind('excel', function () {
+        $this->app->bind('last_excel', function () {
             return new Excel(
                 $this->app->make(Writer::class),
                 $this->app->make(QueuedWriter::class),
@@ -71,9 +71,9 @@ class ExcelServiceProvider extends ServiceProvider
             );
         });
 
-        $this->app->alias('excel', Excel::class);
-        $this->app->alias('excel', Exporter::class);
-        $this->app->alias('excel', Importer::class);
+        $this->app->alias('last_excel', Excel::class);
+        $this->app->alias('last_excel', Exporter::class);
+        $this->app->alias('last_excel', Importer::class);
 
         Collection::mixin(new DownloadCollection);
         Collection::mixin(new StoreCollection);
