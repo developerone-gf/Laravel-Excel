@@ -175,7 +175,7 @@ class Writer
     public function setDefaultValueBinder()
     {
         Cell::setValueBinder(
-            app(config('excel.value_binder.default', DefaultValueBinder::class))
+            app(config('last_excel.value_binder.default', DefaultValueBinder::class))
         );
 
         return $this;

@@ -199,7 +199,7 @@ class Reader
     public function setDefaultValueBinder(): self
     {
         Cell::setValueBinder(
-            app(config('excel.value_binder.default', DefaultValueBinder::class))
+            app(config('last_excel.value_binder.default', DefaultValueBinder::class))
         );
 
         return $this;

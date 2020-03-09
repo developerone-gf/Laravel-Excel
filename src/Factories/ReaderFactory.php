@@ -30,11 +30,11 @@ class ReaderFactory
         );
 
         if (method_exists($reader, 'setReadDataOnly')) {
-            $reader->setReadDataOnly(config('excel.imports.read_only', true));
+            $reader->setReadDataOnly(config('last_excel.imports.read_only', true));
         }
 
         if ($reader instanceof Csv) {
-            static::applyCsvSettings(config('excel.imports.csv', []));
+            static::applyCsvSettings(config('last_excel.imports.csv', []));
 
             if ($import instanceof WithCustomCsvSettings) {
                 static::applyCsvSettings($import->getCsvSettings());

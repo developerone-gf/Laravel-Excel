@@ -23,10 +23,10 @@ class ExcelServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             if ($this->app instanceof LumenApplication) {
-                $this->app->configure('excel');
+                $this->app->configure('last_excel');
             } else {
                 $this->publishes([
-                    $this->getConfigFile() => config_path('excel.php'),
+                    $this->getConfigFile() => config_path('last_excel.php'),
                 ], 'config');
             }
         }
@@ -39,7 +39,7 @@ class ExcelServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(
             $this->getConfigFile(),
-            'excel'
+            'last_excel'
         );
 
         $this->app->bind(TransactionManager::class, function () {
@@ -52,8 +52,8 @@ class ExcelServiceProvider extends ServiceProvider
 
         $this->app->bind(TemporaryFileFactory::class, function () {
             return new TemporaryFileFactory(
-                config('excel.temporary_files.local_path', config('excel.exports.temp_path', storage_path('framework/laravel-excel'))),
-                config('excel.temporary_files.remote_disk')
+                config('last_excel.temporary_files.local_path', config('last_excel.exports.temp_path', storage_path('framework/laravel-excel'))),
+                config('last_excel.temporary_files.remote_disk')
 
             );
         });
@@ -89,6 +89,6 @@ class ExcelServiceProvider extends ServiceProvider
      */
     protected function getConfigFile(): string
     {
-        return __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'excel.php';
+        return __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'last_excel.php';
     }
 }
