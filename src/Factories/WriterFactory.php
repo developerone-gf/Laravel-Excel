@@ -1,12 +1,12 @@
 <?php
 
-namespace Developergf\Excel\Factories;
+namespace Periplia\Sheet\Excel\Factories;
 
-use Developergf\Excel\Concerns\MapsCsvSettings;
-use Developergf\Excel\Concerns\WithCharts;
-use Developergf\Excel\Concerns\WithCustomCsvSettings;
-use Developergf\Excel\Concerns\WithMultipleSheets;
-use Developergf\Excel\Concerns\WithPreCalculateFormulas;
+use Periplia\Sheet\Excel\Concerns\MapsCsvSettings;
+use Periplia\Sheet\Excel\Concerns\WithCharts;
+use Periplia\Sheet\Excel\Concerns\WithCustomCsvSettings;
+use Periplia\Sheet\Excel\Concerns\WithMultipleSheets;
+use Periplia\Sheet\Excel\Concerns\WithPreCalculateFormulas;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Csv;
@@ -38,7 +38,7 @@ class WriterFactory
         }
 
         if ($writer instanceof Csv) {
-            static::applyCsvSettings(config('last_excel.exports.csv', []));
+            static::applyCsvSettings(config('periplia_sheet.exports.csv', []));
 
             if ($export instanceof WithCustomCsvSettings) {
                 static::applyCsvSettings($export->getCsvSettings());
@@ -56,7 +56,7 @@ class WriterFactory
         $writer->setPreCalculateFormulas(
             $export instanceof WithPreCalculateFormulas
                 ? true
-                : config('last_excel.exports.pre_calculate_formulas', false)
+                : config('periplia_sheet.exports.pre_calculate_formulas', false)
         );
 
         return $writer;

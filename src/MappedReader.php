@@ -1,13 +1,13 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
 use Illuminate\Support\Collection;
-use Developergf\Excel\Concerns\ToArray;
-use Developergf\Excel\Concerns\ToCollection;
-use Developergf\Excel\Concerns\ToModel;
-use Developergf\Excel\Concerns\WithCalculatedFormulas;
-use Developergf\Excel\Concerns\WithMappedCells;
+use Periplia\Sheet\Excel\Concerns\ToArray;
+use Periplia\Sheet\Excel\Concerns\ToCollection;
+use Periplia\Sheet\Excel\Concerns\ToModel;
+use Periplia\Sheet\Excel\Concerns\WithCalculatedFormulas;
+use Periplia\Sheet\Excel\Concerns\WithMappedCells;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 class MappedReader

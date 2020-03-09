@@ -1,15 +1,15 @@
 <?php
 
-namespace Developergf\Excel\Imports;
+namespace Periplia\Sheet\Excel\Imports;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use Developergf\Excel\Concerns\SkipsOnError;
-use Developergf\Excel\Concerns\ToModel;
-use Developergf\Excel\Concerns\WithValidation;
-use Developergf\Excel\Exceptions\RowSkippedException;
-use Developergf\Excel\Validators\RowValidator;
-use Developergf\Excel\Validators\ValidationException;
+use Periplia\Sheet\Excel\Concerns\SkipsOnError;
+use Periplia\Sheet\Excel\Concerns\ToModel;
+use Periplia\Sheet\Excel\Concerns\WithValidation;
+use Periplia\Sheet\Excel\Exceptions\RowSkippedException;
+use Periplia\Sheet\Excel\Validators\RowValidator;
+use Periplia\Sheet\Excel\Validators\ValidationException;
 use Throwable;
 
 class ModelManager

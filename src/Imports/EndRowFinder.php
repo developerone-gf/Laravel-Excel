@@ -1,8 +1,8 @@
 <?php
 
-namespace Developergf\Excel\Imports;
+namespace Periplia\Sheet\Excel\Imports;
 
-use Developergf\Excel\Concerns\WithLimit;
+use Periplia\Sheet\Excel\Concerns\WithLimit;
 
 class EndRowFinder
 {

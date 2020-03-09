@@ -1,8 +1,8 @@
 <?php
 
-namespace Developergf\Excel\Concerns;
+namespace Periplia\Sheet\Excel\Concerns;
 
-use Developergf\Excel\Row;
+use Periplia\Sheet\Excel\Row;
 
 interface OnEachRow
 {

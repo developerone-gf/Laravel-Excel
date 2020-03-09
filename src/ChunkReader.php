@@ -1,19 +1,19 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Collection;
-use Developergf\Excel\Concerns\WithChunkReading;
-use Developergf\Excel\Concerns\WithEvents;
-use Developergf\Excel\Concerns\WithLimit;
-use Developergf\Excel\Concerns\WithProgressBar;
-use Developergf\Excel\Events\BeforeImport;
-use Developergf\Excel\Files\TemporaryFile;
-use Developergf\Excel\Imports\HeadingRowExtractor;
-use Developergf\Excel\Jobs\AfterImportJob;
-use Developergf\Excel\Jobs\QueueImport;
-use Developergf\Excel\Jobs\ReadChunk;
+use Periplia\Sheet\Excel\Concerns\WithChunkReading;
+use Periplia\Sheet\Excel\Concerns\WithEvents;
+use Periplia\Sheet\Excel\Concerns\WithLimit;
+use Periplia\Sheet\Excel\Concerns\WithProgressBar;
+use Periplia\Sheet\Excel\Events\BeforeImport;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Imports\HeadingRowExtractor;
+use Periplia\Sheet\Excel\Jobs\AfterImportJob;
+use Periplia\Sheet\Excel\Jobs\QueueImport;
+use Periplia\Sheet\Excel\Jobs\ReadChunk;
 use Throwable;
 
 class ChunkReader

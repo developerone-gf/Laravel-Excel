@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Helpers;
+namespace Periplia\Sheet\Excel\Helpers;
 
 class CellHelper
 {

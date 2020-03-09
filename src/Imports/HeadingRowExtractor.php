@@ -1,10 +1,10 @@
 <?php
 
-namespace Developergf\Excel\Imports;
+namespace Periplia\Sheet\Excel\Imports;
 
-use Developergf\Excel\Concerns\WithHeadingRow;
-use Developergf\Excel\Concerns\WithStartRow;
-use Developergf\Excel\Row;
+use Periplia\Sheet\Excel\Concerns\WithHeadingRow;
+use Periplia\Sheet\Excel\Concerns\WithStartRow;
+use Periplia\Sheet\Excel\Row;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 class HeadingRowExtractor

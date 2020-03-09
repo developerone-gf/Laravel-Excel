@@ -1,19 +1,19 @@
 <?php
 
-namespace Developergf\Excel\Jobs;
+namespace Periplia\Sheet\Excel\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Developergf\Excel\Concerns\WithChunkReading;
-use Developergf\Excel\Concerns\WithCustomValueBinder;
-use Developergf\Excel\Concerns\WithEvents;
-use Developergf\Excel\Events\ImportFailed;
-use Developergf\Excel\Files\TemporaryFile;
-use Developergf\Excel\Filters\ChunkReadFilter;
-use Developergf\Excel\HasEventBus;
-use Developergf\Excel\Imports\HeadingRowExtractor;
-use Developergf\Excel\Sheet;
-use Developergf\Excel\Transactions\TransactionHandler;
+use Periplia\Sheet\Excel\Concerns\WithChunkReading;
+use Periplia\Sheet\Excel\Concerns\WithCustomValueBinder;
+use Periplia\Sheet\Excel\Concerns\WithEvents;
+use Periplia\Sheet\Excel\Events\ImportFailed;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Filters\ChunkReadFilter;
+use Periplia\Sheet\Excel\HasEventBus;
+use Periplia\Sheet\Excel\Imports\HeadingRowExtractor;
+use Periplia\Sheet\Excel\Sheet;
+use Periplia\Sheet\Excel\Transactions\TransactionHandler;
 use PhpOffice\PhpSpreadsheet\Cell\Cell;
 use PhpOffice\PhpSpreadsheet\Reader\IReader;
 use Throwable;
@@ -92,7 +92,7 @@ class ReadChunk implements ShouldQueue
     /**
      * @param  TransactionHandler  $transaction
      *
-     * @throws \Developergf\Excel\Exceptions\SheetNotFoundException
+     * @throws \Periplia\Sheet\Excel\Exceptions\SheetNotFoundException
      * @throws \PhpOffice\PhpSpreadsheet\Reader\Exception
      */
     public function handle(TransactionHandler $transaction)

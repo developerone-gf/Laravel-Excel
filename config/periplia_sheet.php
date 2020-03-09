@@ -1,6 +1,6 @@
 <?php
 
-use Developergf\Excel\Excel;
+use Periplia\Sheet\Excel\Excel;
 
 return [
 
@@ -129,7 +129,7 @@ return [
         | you can implement your own default value binder.
         |
         */
-        'default' => Developergf\Excel\DefaultValueBinder::class,
+        'default' => Periplia\Sheet\Excel\DefaultValueBinder::class,
     ],
 
     'transactions' => [

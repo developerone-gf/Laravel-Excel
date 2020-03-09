@@ -1,13 +1,13 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\PendingDispatch;
 use Illuminate\Support\Collection;
-use Developergf\Excel\Files\Filesystem;
-use Developergf\Excel\Files\TemporaryFile;
-use Developergf\Excel\Helpers\FileTypeDetector;
+use Periplia\Sheet\Excel\Files\Filesystem;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Helpers\FileTypeDetector;
 
 class Excel implements Exporter, Importer
 {

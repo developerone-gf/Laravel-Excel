@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
 use PhpOffice\PhpSpreadsheet\Calculation\Exception;
 use PhpOffice\PhpSpreadsheet\Cell\Cell as SpreadsheetCell;

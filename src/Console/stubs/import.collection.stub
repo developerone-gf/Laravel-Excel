@@ -3,7 +3,7 @@
 namespace DummyNamespace;
 
 use Illuminate\Support\Collection;
-use Developergf\Excel\Concerns\ToCollection;
+use Periplia\Sheet\Excel\Concerns\ToCollection;
 
 class DummyClass implements ToCollection
 {

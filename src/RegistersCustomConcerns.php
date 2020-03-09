@@ -1,12 +1,12 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
-use Developergf\Excel\Events\AfterSheet;
-use Developergf\Excel\Events\BeforeExport;
-use Developergf\Excel\Events\BeforeSheet;
-use Developergf\Excel\Events\BeforeWriting;
-use Developergf\Excel\Events\Event;
+use Periplia\Sheet\Excel\Events\AfterSheet;
+use Periplia\Sheet\Excel\Events\BeforeExport;
+use Periplia\Sheet\Excel\Events\BeforeSheet;
+use Periplia\Sheet\Excel\Events\BeforeWriting;
+use Periplia\Sheet\Excel\Events\Event;
 
 trait RegistersCustomConcerns
 {

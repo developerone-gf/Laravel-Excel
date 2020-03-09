@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Filters;
+namespace Periplia\Sheet\Excel\Filters;
 
 use PhpOffice\PhpSpreadsheet\Reader\IReadFilter;
 

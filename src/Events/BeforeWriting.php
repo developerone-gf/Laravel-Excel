@@ -1,8 +1,8 @@
 <?php
 
-namespace Developergf\Excel\Events;
+namespace Periplia\Sheet\Excel\Events;
 
-use Developergf\Excel\Writer;
+use Periplia\Sheet\Excel\Writer;
 
 class BeforeWriting extends Event
 {

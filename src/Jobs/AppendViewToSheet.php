@@ -1,13 +1,13 @@
 <?php
 
-namespace Developergf\Excel\Jobs;
+namespace Periplia\Sheet\Excel\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Developergf\Excel\Concerns\FromView;
-use Developergf\Excel\Files\TemporaryFile;
-use Developergf\Excel\Writer;
+use Periplia\Sheet\Excel\Concerns\FromView;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Writer;
 
 class AppendViewToSheet implements ShouldQueue
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Developergf\Excel\Events;
+namespace Periplia\Sheet\Excel\Events;
 
-use Developergf\Excel\Reader;
+use Periplia\Sheet\Excel\Reader;
 
 class AfterImport extends Event
 {

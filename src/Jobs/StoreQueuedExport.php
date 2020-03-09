@@ -1,11 +1,11 @@
 <?php
 
-namespace Developergf\Excel\Jobs;
+namespace Periplia\Sheet\Excel\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Developergf\Excel\Files\Filesystem;
-use Developergf\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Files\Filesystem;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
 
 class StoreQueuedExport implements ShouldQueue
 {

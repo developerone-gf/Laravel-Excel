@@ -1,13 +1,13 @@
 <?php
 
-namespace Developergf\Excel\Imports;
+namespace Periplia\Sheet\Excel\Imports;
 
-use Developergf\Excel\Concerns\ToModel;
-use Developergf\Excel\Concerns\WithBatchInserts;
-use Developergf\Excel\Concerns\WithCalculatedFormulas;
-use Developergf\Excel\Concerns\WithMapping;
-use Developergf\Excel\Concerns\WithProgressBar;
-use Developergf\Excel\Row;
+use Periplia\Sheet\Excel\Concerns\ToModel;
+use Periplia\Sheet\Excel\Concerns\WithBatchInserts;
+use Periplia\Sheet\Excel\Concerns\WithCalculatedFormulas;
+use Periplia\Sheet\Excel\Concerns\WithMapping;
+use Periplia\Sheet\Excel\Concerns\WithProgressBar;
+use Periplia\Sheet\Excel\Row;
 use PhpOffice\PhpSpreadsheet\Worksheet\Worksheet;
 
 class ModelImporter

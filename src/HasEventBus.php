@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
 trait HasEventBus
 {

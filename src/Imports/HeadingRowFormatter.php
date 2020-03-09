@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Imports;
+namespace Periplia\Sheet\Excel\Imports;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -84,7 +84,7 @@ class HeadingRowFormatter
      */
     protected static function callFormatter($value)
     {
-        static::$formatter = static::$formatter ?? config('last_excel.imports.heading_row.formatter', self::FORMATTER_SLUG);
+        static::$formatter = static::$formatter ?? config('periplia_sheet.imports.heading_row.formatter', self::FORMATTER_SLUG);
 
         // Call custom formatter
         if (isset(static::$customFormatters[static::$formatter])) {

@@ -1,14 +1,14 @@
 <?php
 
-namespace Developergf\Excel\Concerns;
+namespace Periplia\Sheet\Excel\Concerns;
 
 use Illuminate\Console\OutputStyle;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\PendingDispatch;
 use Illuminate\Support\Collection;
 use InvalidArgumentException;
-use Developergf\Excel\Exceptions\NoFilePathGivenException;
-use Developergf\Excel\Importer;
+use Periplia\Sheet\Excel\Exceptions\NoFilePathGivenException;
+use Periplia\Sheet\Excel\Importer;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 trait Importable

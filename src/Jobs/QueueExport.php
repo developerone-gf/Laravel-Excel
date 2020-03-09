@@ -1,12 +1,12 @@
 <?php
 
-namespace Developergf\Excel\Jobs;
+namespace Periplia\Sheet\Excel\Jobs;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Developergf\Excel\Concerns\WithMultipleSheets;
-use Developergf\Excel\Files\TemporaryFile;
-use Developergf\Excel\Writer;
+use Periplia\Sheet\Excel\Concerns\WithMultipleSheets;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Writer;
 
 class QueueExport implements ShouldQueue
 {

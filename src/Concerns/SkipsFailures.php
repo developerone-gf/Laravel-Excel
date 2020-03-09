@@ -1,9 +1,9 @@
 <?php
 
-namespace Developergf\Excel\Concerns;
+namespace Periplia\Sheet\Excel\Concerns;
 
 use Illuminate\Support\Collection;
-use Developergf\Excel\Validators\Failure;
+use Periplia\Sheet\Excel\Validators\Failure;
 
 trait SkipsFailures
 {

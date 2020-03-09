@@ -1,12 +1,12 @@
 <?php
 
-namespace Developergf\Excel\Facades;
+namespace Periplia\Sheet\Excel\Facades;
 
 use Illuminate\Foundation\Bus\PendingDispatch;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Facade;
-use Developergf\Excel\Excel as BaseExcel;
-use Developergf\Excel\Fakes\ExcelFake;
+use Periplia\Sheet\Excel\Excel as BaseExcel;
+use Periplia\Sheet\Excel\Fakes\ExcelFake;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 /**
@@ -43,6 +43,6 @@ class Excel extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'last_excel';
+        return 'periplia_sheet';
     }
 }

@@ -1,13 +1,13 @@
 <?php
 
-namespace Developergf\Excel\Validators;
+namespace Periplia\Sheet\Excel\Validators;
 
 use Illuminate\Contracts\Validation\Factory;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException as IlluminateValidationException;
-use Developergf\Excel\Concerns\SkipsOnFailure;
-use Developergf\Excel\Concerns\WithValidation;
-use Developergf\Excel\Exceptions\RowSkippedException;
+use Periplia\Sheet\Excel\Concerns\SkipsOnFailure;
+use Periplia\Sheet\Excel\Concerns\WithValidation;
+use Periplia\Sheet\Excel\Exceptions\RowSkippedException;
 
 class RowValidator
 {

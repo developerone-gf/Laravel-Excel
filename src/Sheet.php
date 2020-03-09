@@ -1,48 +1,48 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection;
-use Developergf\Excel\Concerns\FromArray;
-use Developergf\Excel\Concerns\FromCollection;
-use Developergf\Excel\Concerns\FromGenerator;
-use Developergf\Excel\Concerns\FromIterator;
-use Developergf\Excel\Concerns\FromQuery;
-use Developergf\Excel\Concerns\FromView;
-use Developergf\Excel\Concerns\OnEachRow;
-use Developergf\Excel\Concerns\ShouldAutoSize;
-use Developergf\Excel\Concerns\ToArray;
-use Developergf\Excel\Concerns\ToCollection;
-use Developergf\Excel\Concerns\ToModel;
-use Developergf\Excel\Concerns\WithCalculatedFormulas;
-use Developergf\Excel\Concerns\WithCharts;
-use Developergf\Excel\Concerns\WithChunkReading;
-use Developergf\Excel\Concerns\WithColumnFormatting;
-use Developergf\Excel\Concerns\WithCustomChunkSize;
-use Developergf\Excel\Concerns\WithCustomStartCell;
-use Developergf\Excel\Concerns\WithCustomValueBinder;
-use Developergf\Excel\Concerns\WithDrawings;
-use Developergf\Excel\Concerns\WithEvents;
-use Developergf\Excel\Concerns\WithHeadings;
-use Developergf\Excel\Concerns\WithMappedCells;
-use Developergf\Excel\Concerns\WithMapping;
-use Developergf\Excel\Concerns\WithProgressBar;
-use Developergf\Excel\Concerns\WithStrictNullComparison;
-use Developergf\Excel\Concerns\WithTitle;
-use Developergf\Excel\Concerns\WithValidation;
-use Developergf\Excel\Events\AfterSheet;
-use Developergf\Excel\Events\BeforeSheet;
-use Developergf\Excel\Exceptions\ConcernConflictException;
-use Developergf\Excel\Exceptions\RowSkippedException;
-use Developergf\Excel\Exceptions\SheetNotFoundException;
-use Developergf\Excel\Files\TemporaryFileFactory;
-use Developergf\Excel\Helpers\ArrayHelper;
-use Developergf\Excel\Helpers\CellHelper;
-use Developergf\Excel\Imports\EndRowFinder;
-use Developergf\Excel\Imports\HeadingRowExtractor;
-use Developergf\Excel\Imports\ModelImporter;
-use Developergf\Excel\Validators\RowValidator;
+use Periplia\Sheet\Excel\Concerns\FromArray;
+use Periplia\Sheet\Excel\Concerns\FromCollection;
+use Periplia\Sheet\Excel\Concerns\FromGenerator;
+use Periplia\Sheet\Excel\Concerns\FromIterator;
+use Periplia\Sheet\Excel\Concerns\FromQuery;
+use Periplia\Sheet\Excel\Concerns\FromView;
+use Periplia\Sheet\Excel\Concerns\OnEachRow;
+use Periplia\Sheet\Excel\Concerns\ShouldAutoSize;
+use Periplia\Sheet\Excel\Concerns\ToArray;
+use Periplia\Sheet\Excel\Concerns\ToCollection;
+use Periplia\Sheet\Excel\Concerns\ToModel;
+use Periplia\Sheet\Excel\Concerns\WithCalculatedFormulas;
+use Periplia\Sheet\Excel\Concerns\WithCharts;
+use Periplia\Sheet\Excel\Concerns\WithChunkReading;
+use Periplia\Sheet\Excel\Concerns\WithColumnFormatting;
+use Periplia\Sheet\Excel\Concerns\WithCustomChunkSize;
+use Periplia\Sheet\Excel\Concerns\WithCustomStartCell;
+use Periplia\Sheet\Excel\Concerns\WithCustomValueBinder;
+use Periplia\Sheet\Excel\Concerns\WithDrawings;
+use Periplia\Sheet\Excel\Concerns\WithEvents;
+use Periplia\Sheet\Excel\Concerns\WithHeadings;
+use Periplia\Sheet\Excel\Concerns\WithMappedCells;
+use Periplia\Sheet\Excel\Concerns\WithMapping;
+use Periplia\Sheet\Excel\Concerns\WithProgressBar;
+use Periplia\Sheet\Excel\Concerns\WithStrictNullComparison;
+use Periplia\Sheet\Excel\Concerns\WithTitle;
+use Periplia\Sheet\Excel\Concerns\WithValidation;
+use Periplia\Sheet\Excel\Events\AfterSheet;
+use Periplia\Sheet\Excel\Events\BeforeSheet;
+use Periplia\Sheet\Excel\Exceptions\ConcernConflictException;
+use Periplia\Sheet\Excel\Exceptions\RowSkippedException;
+use Periplia\Sheet\Excel\Exceptions\SheetNotFoundException;
+use Periplia\Sheet\Excel\Files\TemporaryFileFactory;
+use Periplia\Sheet\Excel\Helpers\ArrayHelper;
+use Periplia\Sheet\Excel\Helpers\CellHelper;
+use Periplia\Sheet\Excel\Imports\EndRowFinder;
+use Periplia\Sheet\Excel\Imports\HeadingRowExtractor;
+use Periplia\Sheet\Excel\Imports\ModelImporter;
+use Periplia\Sheet\Excel\Validators\RowValidator;
 use PhpOffice\PhpSpreadsheet\Cell\Cell as SpreadsheetCell;
 use PhpOffice\PhpSpreadsheet\Chart\Chart;
 use PhpOffice\PhpSpreadsheet\IOFactory;
@@ -81,7 +81,7 @@ class Sheet
     public function __construct(Worksheet $worksheet)
     {
         $this->worksheet            = $worksheet;
-        $this->chunkSize            = config('last_excel.exports.chunk_size', 100);
+        $this->chunkSize            = config('periplia_sheet.exports.chunk_size', 100);
         $this->temporaryFileFactory = app(TemporaryFileFactory::class);
     }
 

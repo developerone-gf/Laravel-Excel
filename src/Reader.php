@@ -1,25 +1,25 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Collection;
 use InvalidArgumentException;
-use Developergf\Excel\Concerns\SkipsUnknownSheets;
-use Developergf\Excel\Concerns\WithCalculatedFormulas;
-use Developergf\Excel\Concerns\WithChunkReading;
-use Developergf\Excel\Concerns\WithCustomValueBinder;
-use Developergf\Excel\Concerns\WithEvents;
-use Developergf\Excel\Concerns\WithMultipleSheets;
-use Developergf\Excel\Events\AfterImport;
-use Developergf\Excel\Events\BeforeImport;
-use Developergf\Excel\Events\ImportFailed;
-use Developergf\Excel\Exceptions\NoTypeDetectedException;
-use Developergf\Excel\Exceptions\SheetNotFoundException;
-use Developergf\Excel\Factories\ReaderFactory;
-use Developergf\Excel\Files\TemporaryFile;
-use Developergf\Excel\Files\TemporaryFileFactory;
-use Developergf\Excel\Transactions\TransactionHandler;
+use Periplia\Sheet\Excel\Concerns\SkipsUnknownSheets;
+use Periplia\Sheet\Excel\Concerns\WithCalculatedFormulas;
+use Periplia\Sheet\Excel\Concerns\WithChunkReading;
+use Periplia\Sheet\Excel\Concerns\WithCustomValueBinder;
+use Periplia\Sheet\Excel\Concerns\WithEvents;
+use Periplia\Sheet\Excel\Concerns\WithMultipleSheets;
+use Periplia\Sheet\Excel\Events\AfterImport;
+use Periplia\Sheet\Excel\Events\BeforeImport;
+use Periplia\Sheet\Excel\Events\ImportFailed;
+use Periplia\Sheet\Excel\Exceptions\NoTypeDetectedException;
+use Periplia\Sheet\Excel\Exceptions\SheetNotFoundException;
+use Periplia\Sheet\Excel\Factories\ReaderFactory;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Files\TemporaryFileFactory;
+use Periplia\Sheet\Excel\Transactions\TransactionHandler;
 use PhpOffice\PhpSpreadsheet\Cell\Cell;
 use PhpOffice\PhpSpreadsheet\Reader\Exception;
 use PhpOffice\PhpSpreadsheet\Reader\IReader;
@@ -199,7 +199,7 @@ class Reader
     public function setDefaultValueBinder(): self
     {
         Cell::setValueBinder(
-            app(config('last_excel.value_binder.default', DefaultValueBinder::class))
+            app(config('periplia_sheet.value_binder.default', DefaultValueBinder::class))
         );
 
         return $this;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Console;
+namespace Periplia\Sheet\Excel\Console;
 
 use Illuminate\Console\GeneratorCommand;
 use Symfony\Component\Console\Input\InputOption;

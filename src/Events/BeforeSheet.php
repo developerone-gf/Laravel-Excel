@@ -1,8 +1,8 @@
 <?php
 
-namespace Developergf\Excel\Events;
+namespace Periplia\Sheet\Excel\Events;
 
-use Developergf\Excel\Sheet;
+use Periplia\Sheet\Excel\Sheet;
 
 class BeforeSheet extends Event
 {

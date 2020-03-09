@@ -1,5 +1,5 @@
 {
-  "name": "developerone/excel",
+  "name": "periplia/sheet",
   "description": "Supercharged Excel exports and imports in Laravel",
   "license": "MIT",
   "keywords": [
@@ -34,21 +34,21 @@
   },
   "autoload": {
     "psr-4": {
-      "Developergf\\Excel\\": "src/"
+      "Periplia\\Sheet\\Excel\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Developergf\\Excel\\Tests\\": "tests/"
+      "Periplia\\Sheet\\Excel\\Tests\\": "tests/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Developergf\\Excel\\ExcelServiceProvider"
+        "Periplia\\Sheet\\Excel\\ExcelServiceProvider"
       ],
       "aliases": {
-        "LastExcel": "Developergf\\Excel\\Facades\\Excel"
+        "LastExcel": "Periplia\\Sheet\\Excel\\Facades\\Excel"
       }
     }
   },

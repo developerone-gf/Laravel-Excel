@@ -1,22 +1,22 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
 use Illuminate\Support\Collection;
-use Developergf\Excel\Concerns\FromCollection;
-use Developergf\Excel\Concerns\FromQuery;
-use Developergf\Excel\Concerns\FromView;
-use Developergf\Excel\Concerns\WithCustomChunkSize;
-use Developergf\Excel\Concerns\WithCustomQuerySize;
-use Developergf\Excel\Concerns\WithMultipleSheets;
-use Developergf\Excel\Files\TemporaryFile;
-use Developergf\Excel\Files\TemporaryFileFactory;
-use Developergf\Excel\Jobs\AppendDataToSheet;
-use Developergf\Excel\Jobs\AppendQueryToSheet;
-use Developergf\Excel\Jobs\AppendViewToSheet;
-use Developergf\Excel\Jobs\CloseSheet;
-use Developergf\Excel\Jobs\QueueExport;
-use Developergf\Excel\Jobs\StoreQueuedExport;
+use Periplia\Sheet\Excel\Concerns\FromCollection;
+use Periplia\Sheet\Excel\Concerns\FromQuery;
+use Periplia\Sheet\Excel\Concerns\FromView;
+use Periplia\Sheet\Excel\Concerns\WithCustomChunkSize;
+use Periplia\Sheet\Excel\Concerns\WithCustomQuerySize;
+use Periplia\Sheet\Excel\Concerns\WithMultipleSheets;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Files\TemporaryFileFactory;
+use Periplia\Sheet\Excel\Jobs\AppendDataToSheet;
+use Periplia\Sheet\Excel\Jobs\AppendQueryToSheet;
+use Periplia\Sheet\Excel\Jobs\AppendViewToSheet;
+use Periplia\Sheet\Excel\Jobs\CloseSheet;
+use Periplia\Sheet\Excel\Jobs\QueueExport;
+use Periplia\Sheet\Excel\Jobs\StoreQueuedExport;
 use Traversable;
 
 class QueuedWriter
@@ -43,7 +43,7 @@ class QueuedWriter
     public function __construct(Writer $writer, TemporaryFileFactory $temporaryFileFactory)
     {
         $this->writer               = $writer;
-        $this->chunkSize            = config('last_excel.exports.chunk_size', 1000);
+        $this->chunkSize            = config('periplia_sheet.exports.chunk_size', 1000);
         $this->temporaryFileFactory = $temporaryFileFactory;
     }
 

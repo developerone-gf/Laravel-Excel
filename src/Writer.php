@@ -1,17 +1,17 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
-use Developergf\Excel\Concerns\WithCustomValueBinder;
-use Developergf\Excel\Concerns\WithEvents;
-use Developergf\Excel\Concerns\WithMultipleSheets;
-use Developergf\Excel\Concerns\WithTitle;
-use Developergf\Excel\Events\BeforeExport;
-use Developergf\Excel\Events\BeforeWriting;
-use Developergf\Excel\Factories\WriterFactory;
-use Developergf\Excel\Files\RemoteTemporaryFile;
-use Developergf\Excel\Files\TemporaryFile;
-use Developergf\Excel\Files\TemporaryFileFactory;
+use Periplia\Sheet\Excel\Concerns\WithCustomValueBinder;
+use Periplia\Sheet\Excel\Concerns\WithEvents;
+use Periplia\Sheet\Excel\Concerns\WithMultipleSheets;
+use Periplia\Sheet\Excel\Concerns\WithTitle;
+use Periplia\Sheet\Excel\Events\BeforeExport;
+use Periplia\Sheet\Excel\Events\BeforeWriting;
+use Periplia\Sheet\Excel\Factories\WriterFactory;
+use Periplia\Sheet\Excel\Files\RemoteTemporaryFile;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Files\TemporaryFileFactory;
 use PhpOffice\PhpSpreadsheet\Cell\Cell;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -175,7 +175,7 @@ class Writer
     public function setDefaultValueBinder()
     {
         Cell::setValueBinder(
-            app(config('last_excel.value_binder.default', DefaultValueBinder::class))
+            app(config('periplia_sheet.value_binder.default', DefaultValueBinder::class))
         );
 
         return $this;

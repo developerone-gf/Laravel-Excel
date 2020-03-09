@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Exceptions;
+namespace Periplia\Sheet\Excel\Exceptions;
 
 class SheetNotFoundException extends \Exception implements LaravelExcelException
 {

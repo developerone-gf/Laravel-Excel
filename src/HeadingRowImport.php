@@ -1,12 +1,12 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
-use Developergf\Excel\Concerns\Importable;
-use Developergf\Excel\Concerns\WithLimit;
-use Developergf\Excel\Concerns\WithMapping;
-use Developergf\Excel\Concerns\WithStartRow;
-use Developergf\Excel\Imports\HeadingRowFormatter;
+use Periplia\Sheet\Excel\Concerns\Importable;
+use Periplia\Sheet\Excel\Concerns\WithLimit;
+use Periplia\Sheet\Excel\Concerns\WithMapping;
+use Periplia\Sheet\Excel\Concerns\WithStartRow;
+use Periplia\Sheet\Excel\Imports\HeadingRowFormatter;
 
 class HeadingRowImport implements WithStartRow, WithLimit, WithMapping
 {

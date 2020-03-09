@@ -1,11 +1,11 @@
 <?php
 
-namespace Developergf\Excel\Concerns;
+namespace Periplia\Sheet\Excel\Concerns;
 
 use Illuminate\Foundation\Bus\PendingDispatch;
-use Developergf\Excel\Exceptions\NoFilenameGivenException;
-use Developergf\Excel\Exceptions\NoFilePathGivenException;
-use Developergf\Excel\Exporter;
+use Periplia\Sheet\Excel\Exceptions\NoFilenameGivenException;
+use Periplia\Sheet\Excel\Exceptions\NoFilePathGivenException;
+use Periplia\Sheet\Excel\Exporter;
 
 trait Exportable
 {

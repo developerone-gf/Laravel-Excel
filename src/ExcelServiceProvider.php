@@ -1,18 +1,18 @@
 <?php
 
-namespace Developergf\Excel;
+namespace Periplia\Sheet\Excel;
 
 use Illuminate\Support\Collection;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Lumen\Application as LumenApplication;
-use Developergf\Excel\Console\ExportMakeCommand;
-use Developergf\Excel\Console\ImportMakeCommand;
-use Developergf\Excel\Files\Filesystem;
-use Developergf\Excel\Files\TemporaryFileFactory;
-use Developergf\Excel\Mixins\DownloadCollection;
-use Developergf\Excel\Mixins\StoreCollection;
-use Developergf\Excel\Transactions\TransactionHandler;
-use Developergf\Excel\Transactions\TransactionManager;
+use Periplia\Sheet\Excel\Console\ExportMakeCommand;
+use Periplia\Sheet\Excel\Console\ImportMakeCommand;
+use Periplia\Sheet\Excel\Files\Filesystem;
+use Periplia\Sheet\Excel\Files\TemporaryFileFactory;
+use Periplia\Sheet\Excel\Mixins\DownloadCollection;
+use Periplia\Sheet\Excel\Mixins\StoreCollection;
+use Periplia\Sheet\Excel\Transactions\TransactionHandler;
+use Periplia\Sheet\Excel\Transactions\TransactionManager;
 
 class ExcelServiceProvider extends ServiceProvider
 {
@@ -23,10 +23,10 @@ class ExcelServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             if ($this->app instanceof LumenApplication) {
-                $this->app->configure('last_excel');
+                $this->app->configure('periplia_sheet');
             } else {
                 $this->publishes([
-                    $this->getConfigFile() => config_path('last_excel.php'),
+                    $this->getConfigFile() => config_path('periplia_sheet.php'),
                 ], 'config');
             }
         }
@@ -39,7 +39,7 @@ class ExcelServiceProvider extends ServiceProvider
     {
         $this->mergeConfigFrom(
             $this->getConfigFile(),
-            'last_excel'
+            'periplia_sheet'
         );
 
         $this->app->bind(TransactionManager::class, function () {
@@ -52,8 +52,8 @@ class ExcelServiceProvider extends ServiceProvider
 
         $this->app->bind(TemporaryFileFactory::class, function () {
             return new TemporaryFileFactory(
-                config('last_excel.temporary_files.local_path', config('last_excel.exports.temp_path', storage_path('framework/laravel-excel'))),
-                config('last_excel.temporary_files.remote_disk')
+                config('periplia_sheet.temporary_files.local_path', config('periplia_sheet.exports.temp_path', storage_path('framework/laravel-excel'))),
+                config('periplia_sheet.temporary_files.remote_disk')
 
             );
         });
@@ -62,7 +62,7 @@ class ExcelServiceProvider extends ServiceProvider
             return new Filesystem($this->app->make('filesystem'));
         });
 
-        $this->app->bind('last_excel', function () {
+        $this->app->bind('periplia_sheet', function () {
             return new Excel(
                 $this->app->make(Writer::class),
                 $this->app->make(QueuedWriter::class),
@@ -71,9 +71,9 @@ class ExcelServiceProvider extends ServiceProvider
             );
         });
 
-        $this->app->alias('last_excel', Excel::class);
-        $this->app->alias('last_excel', Exporter::class);
-        $this->app->alias('last_excel', Importer::class);
+        $this->app->alias('periplia_sheet', Excel::class);
+        $this->app->alias('periplia_sheet', Exporter::class);
+        $this->app->alias('periplia_sheet', Importer::class);
 
         Collection::mixin(new DownloadCollection);
         Collection::mixin(new StoreCollection);
@@ -89,6 +89,6 @@ class ExcelServiceProvider extends ServiceProvider
      */
     protected function getConfigFile(): string
     {
-        return __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'last_excel.php';
+        return __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'periplia_sheet.php';
     }
 }

@@ -1,11 +1,11 @@
 <?php
 
-namespace Developergf\Excel\Factories;
+namespace Periplia\Sheet\Excel\Factories;
 
-use Developergf\Excel\Concerns\MapsCsvSettings;
-use Developergf\Excel\Concerns\WithCustomCsvSettings;
-use Developergf\Excel\Exceptions\NoTypeDetectedException;
-use Developergf\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Concerns\MapsCsvSettings;
+use Periplia\Sheet\Excel\Concerns\WithCustomCsvSettings;
+use Periplia\Sheet\Excel\Exceptions\NoTypeDetectedException;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Reader\Csv;
 use PhpOffice\PhpSpreadsheet\Reader\Exception;
@@ -30,11 +30,11 @@ class ReaderFactory
         );
 
         if (method_exists($reader, 'setReadDataOnly')) {
-            $reader->setReadDataOnly(config('last_excel.imports.read_only', true));
+            $reader->setReadDataOnly(config('periplia_sheet.imports.read_only', true));
         }
 
         if ($reader instanceof Csv) {
-            static::applyCsvSettings(config('last_excel.imports.csv', []));
+            static::applyCsvSettings(config('periplia_sheet.imports.csv', []));
 
             if ($import instanceof WithCustomCsvSettings) {
                 static::applyCsvSettings($import->getCsvSettings());

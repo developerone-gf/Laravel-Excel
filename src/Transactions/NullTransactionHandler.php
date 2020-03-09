@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Transactions;
+namespace Periplia\Sheet\Excel\Transactions;
 
 class NullTransactionHandler implements TransactionHandler
 {

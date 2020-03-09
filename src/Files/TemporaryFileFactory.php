@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Files;
+namespace Periplia\Sheet\Excel\Files;
 
 use Illuminate\Support\Str;
 
@@ -67,7 +67,7 @@ class TemporaryFileFactory
 
         return new RemoteTemporaryFile(
             $this->temporaryDisk,
-            config('last_excel.temporary_files.remote_prefix') . $filename,
+            config('periplia_sheet.temporary_files.remote_prefix') . $filename,
             $this->makeLocal($filename)
         );
     }

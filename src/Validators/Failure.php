@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Validators;
+namespace Periplia\Sheet\Excel\Validators;
 
 use Illuminate\Contracts\Support\Arrayable;
 

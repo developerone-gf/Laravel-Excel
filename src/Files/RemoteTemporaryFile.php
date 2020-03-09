@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Files;
+namespace Periplia\Sheet\Excel\Files;
 
 class RemoteTemporaryFile extends TemporaryFile
 {

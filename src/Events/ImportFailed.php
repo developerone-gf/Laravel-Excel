@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Events;
+namespace Periplia\Sheet\Excel\Events;
 
 use Throwable;
 

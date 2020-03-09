@@ -1,13 +1,13 @@
 <?php
 
-namespace Developergf\Excel\Mixins;
+namespace Periplia\Sheet\Excel\Mixins;
 
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Collection;
-use Developergf\Excel\Concerns\Exportable;
-use Developergf\Excel\Concerns\FromCollection;
-use Developergf\Excel\Concerns\WithHeadings;
-use Developergf\Excel\Sheet;
+use Periplia\Sheet\Excel\Concerns\Exportable;
+use Periplia\Sheet\Excel\Concerns\FromCollection;
+use Periplia\Sheet\Excel\Concerns\WithHeadings;
+use Periplia\Sheet\Excel\Sheet;
 
 class DownloadCollection
 {

@@ -2,7 +2,7 @@
 
 namespace DummyNamespace;
 
-use Developergf\Excel\Concerns\FromCollection;
+use Periplia\Sheet\Excel\Concerns\FromCollection;
 
 class DummyClass implements FromCollection
 {

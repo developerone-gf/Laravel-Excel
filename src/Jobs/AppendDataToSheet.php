@@ -1,12 +1,12 @@
 <?php
 
-namespace Developergf\Excel\Jobs;
+namespace Periplia\Sheet\Excel\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
-use Developergf\Excel\Files\TemporaryFile;
-use Developergf\Excel\Writer;
+use Periplia\Sheet\Excel\Files\TemporaryFile;
+use Periplia\Sheet\Excel\Writer;
 
 class AppendDataToSheet implements ShouldQueue
 {

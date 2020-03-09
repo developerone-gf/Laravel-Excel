@@ -1,8 +1,8 @@
 <?php
 
-namespace Developergf\Excel\Helpers;
+namespace Periplia\Sheet\Excel\Helpers;
 
-use Developergf\Excel\Exceptions\NoTypeDetectedException;
+use Periplia\Sheet\Excel\Exceptions\NoTypeDetectedException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class FileTypeDetector
@@ -31,7 +31,7 @@ class FileTypeDetector
             throw new NoTypeDetectedException();
         }
 
-        return config('last_excel.extension_detector.' . strtolower($extension));
+        return config('periplia_sheet.extension_detector.' . strtolower($extension));
     }
 
     /**

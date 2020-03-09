@@ -1,8 +1,8 @@
 <?php
 
-namespace Developergf\Excel\Concerns;
+namespace Periplia\Sheet\Excel\Concerns;
 
-use Developergf\Excel\Validators\Failure;
+use Periplia\Sheet\Excel\Validators\Failure;
 
 interface SkipsOnFailure
 {

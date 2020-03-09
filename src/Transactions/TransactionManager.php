@@ -1,6 +1,6 @@
 <?php
 
-namespace Developergf\Excel\Transactions;
+namespace Periplia\Sheet\Excel\Transactions;
 
 use Illuminate\Support\Manager;
 
@@ -11,7 +11,7 @@ class TransactionManager extends Manager
      */
     public function getDefaultDriver()
     {
-        return config('last_excel.transactions.handler');
+        return config('periplia_sheet.transactions.handler');
     }
 
     /**

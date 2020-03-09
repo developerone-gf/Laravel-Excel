@@ -1,13 +1,13 @@
 <?php
 
-namespace Developergf\Excel\Jobs;
+namespace Periplia\Sheet\Excel\Jobs;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Developergf\Excel\Concerns\WithEvents;
-use Developergf\Excel\Events\ImportFailed;
-use Developergf\Excel\HasEventBus;
-use Developergf\Excel\Reader;
+use Periplia\Sheet\Excel\Concerns\WithEvents;
+use Periplia\Sheet\Excel\Events\ImportFailed;
+use Periplia\Sheet\Excel\HasEventBus;
+use Periplia\Sheet\Excel\Reader;
 use Throwable;
 
 class AfterImportJob implements ShouldQueue

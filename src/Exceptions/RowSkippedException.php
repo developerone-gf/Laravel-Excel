@@ -1,10 +1,10 @@
 <?php
 
-namespace Developergf\Excel\Exceptions;
+namespace Periplia\Sheet\Excel\Exceptions;
 
 use Exception;
 use Illuminate\Support\Collection;
-use Developergf\Excel\Validators\Failure;
+use Periplia\Sheet\Excel\Validators\Failure;
 
 class RowSkippedException extends Exception
 {
